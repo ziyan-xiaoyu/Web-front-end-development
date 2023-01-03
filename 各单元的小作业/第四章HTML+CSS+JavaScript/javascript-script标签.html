@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8"/>
+		<script> 
+			function tt() {var tt=document.forms[0].elements[0]; var type=tt.type; value=tt.value; alert("type is:"+type+"value is:"+value);}
+		</script>
+
+		<script>
+			function showPic() {window.open("images/qq_logo.png", "newwin","width=200, height=200 ");return false;}
+		</script>
+	</head>
+
+
+
+	<body> 
+		<p>HTML 页面</p>
+		<script type="text/javascript"> 
+			document.write("<h1>你好！JavaScript</h1>");
+		</script>
+
+
+		<p>创建一个函数</P>
+        <script>
+	      function add(x, y) { return x + y;}
+	      var sum=add(1,2); //函数执行后的返回值
+	      var add1=add; //函数对象赋值
+	      alert("x+y="+add1(1,2));
+	      var addxy=new Function ("x","y","return x + y;");
+	      alert("x+y="+addxy(1,2));
+        </script>
+
+
+        <form>
+		<input type="text" onblur="tt()"></input>
+	    </form>  
+
+
+
+	    <p>创建一个字符串对象</P>
+		<script>
+			var ss=new String("你好！ JavaScript！");
+			/* var ss="你好！ JavaScript！";  */
+			var ll=ss.length;
+			ss=ss.toUpperCase();
+			alert("字符串长度："+ll+"，将字符串变成大写："+ss);
+		</script>  
+
+
+		<a href="#" onclick="showPic()">查看图片</a>
+
+
+		<h1 id="d1"> DOM改变CSS样式</h1>
+		<button type="button"
+		 onclick="document.getElementById('d1').style.color='red'"> 点击变成红色 </button>
+	</body>
+</html>
