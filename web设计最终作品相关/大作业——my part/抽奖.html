@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>抽奖系统</title>
+	<!-- <link rel="icon" type="image/x-icon" href="img/img.icon"/> -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+	<div class="logo">
+		<div class="blue"><img src="img/img.png"></div>
+		<<div class="red" id="red">
+			<audio id="music" src="music/2381646767.mp3" controls loop></audio>
+		</div>
+	</div>
+
+    <div>
+        <p id="note">点击上方 color-X伴你放松心情</p>
+	    <div class="title1">&nbsp;知识小问答</div>
+	<div>
+	    
+	<div class="title2">&nbsp;快来抽取你的专属题目吧~</div>
+
+	<div id="div">
+		<div id="text">
+			第 <span id="seat">00</span>&nbsp;题
+		</div>
+		<div id="opera">
+			<div id="start">&nbsp;开始</div>
+			<div id="reset">&nbsp;重置</div>
+		</div>
+	</div>
+
+	<div class="lucky" id="lucky"></div>
+	<div id="clear">&nbsp;清空再来</div>
+	<script type="text/javascript">
+		function deleteDivs(Obj){
+			Obj.parentNode.parentNode.removeChild(Obj.parentNode);
+			let div1=document.getElementById("lucky");
+			let div2=document.getElementById("clear");
+			let str=div1.innerHTML;
+			if (str.indexOf("<div>") < 0) {
+				div1.style.display ="none";
+				div2.style.display ="none";
+			}
+		}
+	</script>
+</body>
+</html>
